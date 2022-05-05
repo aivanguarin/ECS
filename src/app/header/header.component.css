@@ -2,7 +2,13 @@ mat-toolbar{
     background-color: #424242;
     color: aliceblue;
 }
-
+.logo {
+    padding-top: 7px;
+}
+.logo img {
+    height: 50px;
+    width: 100%;
+}
 .closedMenu{
     display: none;
 }
@@ -26,7 +32,7 @@ mat-toolbar{
 }
 
 .content{
-    flex: 3 3 auto;
+    flex: 3 3px auto;
 }
 
 .mini-spacer{

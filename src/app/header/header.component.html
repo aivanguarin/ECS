@@ -1,6 +1,9 @@
 <mat-toolbar color="'primary'">
     <div fxLayout="row" class="content">
-        &lt;logo&gt;
+        <!-- &lt;logo&gt;  -->
+        <div class="logo">
+            <img src="/assets/img/logo.png">
+        </div>
         <div class="openedMenu">
             <a mat-button [routerLink]="['/home']"     >Home           </a>
             <a mat-button *ngIf="isLoggedIn()" [routerLink]="['/manage']"   >Manage Entities</a>
