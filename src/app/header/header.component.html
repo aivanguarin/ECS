@@ -5,7 +5,7 @@
             <img src="/assets/img/logo.png">
         </div>
         <div class="openedMenu">
-            <a mat-button [routerLink]="['/home']"     >Home           </a>
+            <a mat-button *ngIf="isLoggedIn()" [routerLink]="['/home']"     >Home           </a>
             <a mat-button *ngIf="isLoggedIn()" [routerLink]="['/manage']"   >Manage Entities</a>
             <a mat-button *ngIf="isLoggedIn()" [routerLink]="['/setup']"    >Setup Semesters</a>
             <a mat-button [routerLink]="['/schedules']">Schedules      </a>
@@ -29,11 +29,12 @@
         <div class="mini-spacer"></div>
         <div class="account">
             <button mat-button [matMenuTriggerFor]="account">
-                <mat-icon>account_circle</mat-icon>
+                <mat-icon *ngIf="isLoggedIn()"> account_circle</mat-icon>
                 <span *ngIf="isLoggedIn()">&lt;account name&gt;</span>
             </button>
             <mat-menu #account="matMenu">
-                <a mat-menu-item *ngIf="!isLoggedIn()" [routerLink]="['/login']">Login</a>
+               <!-- <a mat-menu-item *ngIf="!isLoggedIn()" [routerLink]="['/login']">Login</a>
+               -->
                 <a mat-menu-item *ngIf="isLoggedIn()" (click)="logout()">Log Out</a>
             </mat-menu>
         </div>

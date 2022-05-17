@@ -1,5 +1,6 @@
 mat-toolbar{
-    background-color: #424242;
+   background-color: #424242;
+/* background-color: #121212; */
     color: aliceblue;
 }
 .logo {
@@ -16,6 +17,9 @@ mat-toolbar{
 .openedMenu{
     display: inline;
 }
+.content{
+    font-size: 15px;
+}
 
 @media (max-width: 600px){
     .closedMenu{
@@ -24,6 +28,13 @@ mat-toolbar{
 
     .openedMenu{
         display: none;
+    }
+    .logo {
+        padding-top: 7px;
+    }
+    .logo img {
+        height: 30px;
+        width: 100%;
     }
 }
 

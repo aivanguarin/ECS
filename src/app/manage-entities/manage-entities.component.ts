@@ -54,7 +54,7 @@ export class ManageEntitiesComponent implements OnInit {
   });
 
   public usersTableReady = false;
-  public showNewUserPopup = true;                                                       // !!
+  public showNewUserPopup = false;                                                       // !!
   public showEditUserPopup = false;
 
   row!: Users;
